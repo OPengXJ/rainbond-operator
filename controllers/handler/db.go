@@ -7,10 +7,10 @@ import (
 	"strings"
 	"time"
 
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
+	"github.com/OPengXJ/rainbond-operator/util/commonutil"
+	"github.com/OPengXJ/rainbond-operator/util/k8sutil"
 	"github.com/docker/distribution/reference"
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
-	"github.com/goodrain/rainbond-operator/util/commonutil"
-	"github.com/goodrain/rainbond-operator/util/k8sutil"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	k8sErrors "k8s.io/apimachinery/pkg/api/errors"
@@ -52,7 +52,7 @@ var _ ComponentHandler = &db{}
 var _ StorageClassRWOer = &db{}
 var _ ClusterScopedResourcesCreator = &db{}
 
-//NewDB new db
+// NewDB new db
 func NewDB(ctx context.Context, client client.Client, component *rainbondv1alpha1.RbdComponent, cluster *rainbondv1alpha1.RainbondCluster) ComponentHandler {
 	d := &db{
 		ctx:            ctx,

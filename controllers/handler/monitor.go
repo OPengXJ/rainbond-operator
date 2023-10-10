@@ -7,10 +7,10 @@ import (
 
 	"k8s.io/apimachinery/pkg/api/resource"
 
-	"github.com/goodrain/rainbond-operator/util/probeutil"
+	"github.com/OPengXJ/rainbond-operator/util/probeutil"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
-	"github.com/goodrain/rainbond-operator/util/commonutil"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
+	"github.com/OPengXJ/rainbond-operator/util/commonutil"
 
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"

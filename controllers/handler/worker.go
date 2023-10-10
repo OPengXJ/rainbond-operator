@@ -6,14 +6,14 @@ import (
 	"path"
 	"strings"
 
-	checksqllite "github.com/goodrain/rainbond-operator/util/check-sqllite"
+	checksqllite "github.com/OPengXJ/rainbond-operator/util/check-sqllite"
 
-	"github.com/goodrain/rainbond-operator/util/probeutil"
+	"github.com/OPengXJ/rainbond-operator/util/probeutil"
 
-	"github.com/goodrain/rainbond-operator/util/commonutil"
-	"github.com/goodrain/rainbond-operator/util/constants"
+	"github.com/OPengXJ/rainbond-operator/util/commonutil"
+	"github.com/OPengXJ/rainbond-operator/util/constants"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
 
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"

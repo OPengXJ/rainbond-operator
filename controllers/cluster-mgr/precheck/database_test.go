@@ -5,8 +5,8 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
-	"github.com/goodrain/rainbond-operator/controllers/cluster-mgr/precheck"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
+	"github.com/OPengXJ/rainbond-operator/controllers/cluster-mgr/precheck"
 	"github.com/stretchr/testify/assert"
 	corev1 "k8s.io/api/core/v1"
 )

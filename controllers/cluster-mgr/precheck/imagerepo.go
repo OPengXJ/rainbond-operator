@@ -3,14 +3,15 @@ package precheck
 import (
 	"context"
 	"fmt"
-	"github.com/goodrain/rainbond-operator/util/repositoryutil"
 	"time"
 
-	"github.com/goodrain/rainbond-operator/util/constants"
-	"github.com/goodrain/rainbond-operator/util/rbdutil"
+	"github.com/OPengXJ/rainbond-operator/util/repositoryutil"
 
+	"github.com/OPengXJ/rainbond-operator/util/constants"
+	"github.com/OPengXJ/rainbond-operator/util/rbdutil"
+
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
 	"github.com/go-logr/logr"
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

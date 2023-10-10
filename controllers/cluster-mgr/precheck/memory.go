@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/goodrain/rainbond-operator/util/k8sutil"
+	"github.com/OPengXJ/rainbond-operator/util/k8sutil"
 
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
 	"github.com/go-logr/logr"
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"sigs.k8s.io/controller-runtime/pkg/client"

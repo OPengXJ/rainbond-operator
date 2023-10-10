@@ -3,17 +3,18 @@ package handler
 import (
 	"context"
 	"fmt"
+	"os/exec"
+
 	"github.com/sirupsen/logrus"
 	networkingv1beta1 "k8s.io/api/networking/v1beta1"
 	k8sErrors "k8s.io/apimachinery/pkg/api/errors"
 	utilversion "k8s.io/apimachinery/pkg/util/version"
-	"os/exec"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
-	"github.com/goodrain/rainbond-operator/util/commonutil"
-	"github.com/goodrain/rainbond-operator/util/constants"
-	"github.com/goodrain/rainbond-operator/util/k8sutil"
-	"github.com/goodrain/rainbond-operator/util/rbdutil"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
+	"github.com/OPengXJ/rainbond-operator/util/commonutil"
+	"github.com/OPengXJ/rainbond-operator/util/constants"
+	"github.com/OPengXJ/rainbond-operator/util/k8sutil"
+	"github.com/OPengXJ/rainbond-operator/util/rbdutil"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	networkingv1 "k8s.io/api/networking/v1"
@@ -22,7 +23,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 
-//HubName name
+// HubName name
 var HubName = "rbd-hub"
 var hubDataPvcName = "rbd-hub"
 var hubImageRepository = "hub-image-repository"
@@ -45,7 +46,7 @@ type hub struct {
 var _ ComponentHandler = &hub{}
 var _ StorageClassRWXer = &hub{}
 
-//NewHub nw hub
+// NewHub nw hub
 func NewHub(ctx context.Context, client client.Client, component *rainbondv1alpha1.RbdComponent, cluster *rainbondv1alpha1.RainbondCluster) ComponentHandler {
 	return &hub{
 		component:      component,

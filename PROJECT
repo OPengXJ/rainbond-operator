@@ -1,7 +1,7 @@
 domain: rainbond.io
 layout: go.kubebuilder.io/v3
 projectName: rainbond-operator
-repo: github.com/goodrain/rainbond-operator
+repo: github.com/OPengXJ/rainbond-operator
 resources:
 - crdVersion: v1
   group: rainbond.io

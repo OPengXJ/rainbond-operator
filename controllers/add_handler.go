@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
-	"github.com/goodrain/rainbond-operator/controllers/handler"
-	"github.com/goodrain/rainbond-operator/util/constants"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
+	"github.com/OPengXJ/rainbond-operator/controllers/handler"
+	"github.com/OPengXJ/rainbond-operator/util/constants"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 )
 

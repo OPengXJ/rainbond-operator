@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"path"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
-	"github.com/goodrain/rainbond-operator/controllers/plugin"
-	"github.com/goodrain/rainbond-operator/util/commonutil"
-	"github.com/goodrain/rainbond-operator/util/k8sutil"
-	"github.com/goodrain/rainbond-operator/util/rbdutil"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
+	"github.com/OPengXJ/rainbond-operator/controllers/plugin"
+	"github.com/OPengXJ/rainbond-operator/util/commonutil"
+	"github.com/OPengXJ/rainbond-operator/util/k8sutil"
+	"github.com/OPengXJ/rainbond-operator/util/rbdutil"
 
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"

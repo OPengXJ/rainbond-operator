@@ -35,10 +35,10 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/controller/controllerutil"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
-	"github.com/goodrain/rainbond-operator/controllers/plugin"
-	"github.com/goodrain/rainbond-operator/util/k8sutil"
-	"github.com/goodrain/rainbond-operator/util/rbdutil"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
+	"github.com/OPengXJ/rainbond-operator/controllers/plugin"
+	"github.com/OPengXJ/rainbond-operator/util/k8sutil"
+	"github.com/OPengXJ/rainbond-operator/util/rbdutil"
 )
 
 // RainbondVolumeReconciler reconciles a RainbondVolume object
@@ -48,7 +48,7 @@ type RainbondVolumeReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-//ErrCSIPluginNotReady -
+// ErrCSIPluginNotReady -
 var ErrCSIPluginNotReady = errors.New("csi plugin not ready")
 
 // +kubebuilder:rbac:groups=rainbond.io,resources=rainbondvolumes,verbs=get;list;watch;create;update;patch;delete

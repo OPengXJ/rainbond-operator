@@ -6,13 +6,13 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/goodrain/rainbond-operator/util/k8sutil"
-	"github.com/goodrain/rainbond-operator/util/rbdutil"
+	"github.com/OPengXJ/rainbond-operator/util/k8sutil"
+	"github.com/OPengXJ/rainbond-operator/util/rbdutil"
 	utilversion "k8s.io/apimachinery/pkg/util/version"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
-	"github.com/goodrain/rainbond-operator/util/commonutil"
-	"github.com/goodrain/rainbond-operator/util/probeutil"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
+	"github.com/OPengXJ/rainbond-operator/util/commonutil"
+	"github.com/OPengXJ/rainbond-operator/util/probeutil"
 	appsv1 "k8s.io/api/apps/v1"
 	batchv1 "k8s.io/api/batch/v1"
 	corev1 "k8s.io/api/core/v1"

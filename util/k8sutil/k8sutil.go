@@ -3,14 +3,15 @@ package k8sutil
 import (
 	"context"
 	"fmt"
-	"github.com/sirupsen/logrus"
 	"net"
 	"os"
 	"sync"
 	"time"
 
-	"github.com/goodrain/rainbond-operator/util/commonutil"
-	"github.com/goodrain/rainbond-operator/util/constants"
+	"github.com/sirupsen/logrus"
+
+	"github.com/OPengXJ/rainbond-operator/util/commonutil"
+	"github.com/OPengXJ/rainbond-operator/util/constants"
 	corev1 "k8s.io/api/core/v1"
 	networkingv1 "k8s.io/api/networking/v1"
 	k8sErrors "k8s.io/apimachinery/pkg/api/errors"

@@ -3,10 +3,11 @@ package precheck
 import (
 	"database/sql"
 	"fmt"
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
+	"time"
+
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"time"
 )
 
 type database struct {

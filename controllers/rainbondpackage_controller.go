@@ -28,6 +28,12 @@ import (
 	"strings"
 	"time"
 
+	"github.com/OPengXJ/rainbond-operator/util/commonutil"
+	"github.com/OPengXJ/rainbond-operator/util/constants"
+	"github.com/OPengXJ/rainbond-operator/util/downloadutil"
+	"github.com/OPengXJ/rainbond-operator/util/initcontainerd"
+	"github.com/OPengXJ/rainbond-operator/util/retryutil"
+	"github.com/OPengXJ/rainbond-operator/util/tarutil"
 	"github.com/containerd/containerd"
 	"github.com/containerd/containerd/errdefs"
 	"github.com/containerd/containerd/images"
@@ -37,12 +43,6 @@ import (
 	dtypes "github.com/docker/docker/api/types"
 	dclient "github.com/docker/docker/client"
 	"github.com/go-logr/logr"
-	"github.com/goodrain/rainbond-operator/util/commonutil"
-	"github.com/goodrain/rainbond-operator/util/constants"
-	"github.com/goodrain/rainbond-operator/util/downloadutil"
-	"github.com/goodrain/rainbond-operator/util/initcontainerd"
-	"github.com/goodrain/rainbond-operator/util/retryutil"
-	"github.com/goodrain/rainbond-operator/util/tarutil"
 	"github.com/sirupsen/logrus"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -55,7 +55,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 
-	rainbondv1alpha1 "github.com/goodrain/rainbond-operator/api/v1alpha1"
+	rainbondv1alpha1 "github.com/OPengXJ/rainbond-operator/api/v1alpha1"
 )
 
 var errorClusterConfigNotReady = fmt.Errorf("cluster config can not be ready")
@@ -208,7 +208,7 @@ func initPackageStatus(status rainbondv1alpha1.PackageConditionStatus) rainbondv
 	}
 }
 
-//checkStatusCanReturn if pkg status in the working state, straight back
+// checkStatusCanReturn if pkg status in the working state, straight back
 func checkStatusCanReturn(pkg *rainbondv1alpha1.RainbondPackage) (updateStatus bool, re *reconcile.Result) {
 	if len(pkg.Status.Conditions) == 0 {
 		pkg.Status = initPackageStatus(rainbondv1alpha1.Waiting)
@@ -484,7 +484,7 @@ func (p *pkg) setInitStatus() error {
 	return nil
 }
 
-//donwnloadPackage download package
+// donwnloadPackage download package
 func (p *pkg) donwnloadPackage() error {
 	p.log.Info(fmt.Sprintf("start download package from %s", p.downloadPackageURL))
 	downloadListener := &downloadutil.DownloadWithProgress{
@@ -539,7 +539,7 @@ func (p *pkg) donwnloadPackage() error {
 	return nil
 }
 
-//handle
+// handle
 func (p *pkg) handle() error {
 	p.log.V(5).Info("start handling rainbond package.")
 	// check prerequisites

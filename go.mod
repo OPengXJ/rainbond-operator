@@ -1,4 +1,4 @@
-module github.com/goodrain/rainbond-operator
+module github.com/OPengXJ/rainbond-operator
 
 go 1.18
 
